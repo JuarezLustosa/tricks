@@ -9,3 +9,7 @@ Tricks for help development
   
   - find app/models/ -name *.rb -exec sed -i '' 's/isso/vai_virar_isso/g' {} +
   - EX: find app/models/ -name *.rb -exec sed -i '' 's/#{unico\_db}\.//g' {} +
+
+- Comandos Gits
+  Para remover comando indevido
+  - git rebase --onto <rev> <rev> 
