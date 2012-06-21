@@ -13,3 +13,17 @@ Tricks for help development
 - Comandos Gits
   Para remover comando indevido
   - git rebase --onto <rev> <rev> 
+
+
+- Metaprograming
+
+module Utils
+  def output(message)
+    puts message
+  end
+end
+
+module MyApp extend Utils # OMG! This is totally new for me!
+end
+
+MyApp.output "hello"
