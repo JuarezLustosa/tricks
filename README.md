@@ -9,6 +9,11 @@ Tricks for help development
   
   - find app/models/ -name *.rb -exec sed -i '' 's/isso/vai_virar_isso/g' {} +
   - EX: find app/models/ -name *.rb -exec sed -i '' 's/#{unico\_db}\.//g' {} +
+  - 
+
+* Comando para renomear varios arquivos
+  - for i in `find . -name '*.erb'` ; do mv $i ${i%erb}haml ; done 
+  - By jonjon
 
 - Comandos Gits
   Para remover comando indevido
