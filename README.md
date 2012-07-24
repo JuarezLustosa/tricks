@@ -44,3 +44,18 @@ The gem is already disributed with RVM so in most cases you should have it by de
 
 gem regenerate_binstubs # only once
 You can find more information on the project page: https://github.com/mpapis/rubygems-bundler or on my blog: http://niczsoft.com/2012/05/rubygems-bundler-integration-gem-1-0-0/
+
+- Rails Metodos 
+
+Account.reflect_on_all_associations             # returns an array of all associations
+Account.reflect_on_all_associations(:has_many)  # returns an array of all has_many associations
+Source: show | on GitHub
+
+reflect_on_all_autosave_associations()
+Returns an array of AssociationReflection objects for all associations which have :autosave enabled.
+
+reflect_on_association(association)
+Returns the AssociationReflection object for the association (use the symbol).
+
+Account.reflect_on_association(:owner)             # returns the owner AssociationReflection
+Invoice.reflect_on_association(:line_items).macro  # returns :has_many
