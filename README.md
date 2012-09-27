@@ -5,8 +5,10 @@ Tricks for help development
 
 `````
     Comando scp para copiar algo do servidor
-````
+    
     - scp -P NUMERO DA PORTA database@IPDAMAQUINA:/var/lib/postgresql/dump.tar.gz .
+````
+    
 
 - Comando find em bash
 
