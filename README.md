@@ -8,7 +8,23 @@ Tricks for help development
     
     - scp -P NUMERO DA PORTA database@IPDAMAQUINA:/var/lib/postgresql/dump.tar.gz .
 ````
+
+
+`````
+    Resolvendo o seguinte erro 
     
+    "RuntimeError ( Ghostscript not found in your environment.
+    Install it and set the variable RGhost::Config::GS[:path] with the executable.
+    Example: RGhost::Config::GS[:path]='/path/to/my/gs' #unix-style
+    RGhost::Config::GS[:path]="C:\\gs\\bin\\gswin32c.exe"  #windows-style
+    ):"
+    
+    
+     - sudo mkdir -p /opt/local/bin/
+     - sudo ln -s /usr/local/bin/gs /opt/local/bin/gs
+````
+
+
 
 - Comando find em bash
 
