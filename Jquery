@@ -1,0 +1,6 @@
+Alterando a imagem de acordo com a movimentação
+
+$("#image").stop().animate({opacity: 0},1000,function(){
+    $(this).css({'background-image': "url('/images/alt_image.png')"})
+               .animate({opacity: 1},{duration:1000});
+ });
