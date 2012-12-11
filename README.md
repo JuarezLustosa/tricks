@@ -37,6 +37,10 @@ Tricks for help development
   - for i in `find . -name '*.erb'` ; do mv $i ${i%erb}haml ; done 
   - By jonjon
 
+* Comando para matar varios processos de uma vez atraves do grep
+  - kill -9 `ps aux | grep 20121126165651 | grep -v grep | awk '{print $2}'`
+ 
+
 - Comandos Gits
   Para remover comando indevido
   - git rebase --onto <rev> <rev> 
