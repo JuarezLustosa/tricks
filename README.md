@@ -82,3 +82,11 @@ Returns the AssociationReflection object for the association (use the symbol).
 
 Account.reflect_on_association(:owner)             # returns the owner AssociationReflection
 Invoice.reflect_on_association(:line_items).macro  # returns :has_many
+
+
+----- Para invocar uma rake dentro de outra rake -----
+
+task :invoke_another_task do
+  # some code
+  Rake::Task["another:task"].invoke
+end
