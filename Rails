@@ -1,0 +1,33 @@
+Generate large file via Rails
+
+class InvoicesCsvStreamer
+
+  def initialize
+     @invoices = Invoices.all
+  end
+
+  def each
+    yield csv_header
+    @invoices.find_each do |invoice|
+      yield csv_row(invoice)
+    end
+  end
+
+  def csv_row(invoice)
+    [invoice.uid, invoice.description, invoice.price, invoice.date].to_csv
+  end
+
+  def csv_header
+    ["UID", "Description", "Price", "Date"].to_csv
+  end
+end
+
+# app/controllers/invoices_controller.rb
+
+class InvoicesController > ApplicationController
+  def report
+    @csv_streamer = InvoicesCsvStreamer.new
+    response.headers["Last-Modified"] ||= Time.now
+    self.response_body = @csv_streamer
+  end
+end
