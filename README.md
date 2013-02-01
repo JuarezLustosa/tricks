@@ -24,7 +24,11 @@ Tricks for help development
      - sudo ln -s /usr/local/bin/gs /opt/local/bin/gs
 ````
 
-
+`````
+    Comando postgres para dar acesso a um usuário a um banco
+    
+    - psql -U postgres -qAt -c "select 'grant select on ' || tablename || ' to \"user\";' from pg_tables where schemaname = 'public'" nome_do_banco | psql -U postgres nome_do_banco
+````
 
 - Comando find em bash
 
