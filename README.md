@@ -25,7 +25,7 @@ Tricks for help development
 ````
 
 `````
-    Comando postgres para dar acesso a um usuário a um banco
+    Comando postgres para dar acesso a um usuário a todas as tabelas de um banco
     
     - psql -U postgres -qAt -c "select 'grant select on ' || tablename || ' to \"user\";' from pg_tables where schemaname = 'public'" nome_do_banco | psql -U postgres nome_do_banco
 ````
