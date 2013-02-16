@@ -9,6 +9,11 @@ Tricks for help development
     - scp -P NUMERO DA PORTA database@IPDAMAQUINA:/var/lib/postgresql/dump.tar.gz .
 ````
 
+`````
+    Adicionar porta no iptables
+    
+    iptables -A INPUT -m multiport -p tcp --dport 5432 -j ACCEPT
+````
 
 `````
     Resolvendo o seguinte erro 
