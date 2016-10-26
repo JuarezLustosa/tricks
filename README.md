@@ -103,3 +103,10 @@ task :invoke_another_task do
   # some code
   Rake::Task["another:task"].invoke
 end
+
+
+------- GIT ----------
+
+http://nvie.com/posts/a-successful-git-branching-model/
+
+https://nathanhoad.net/deploy-from-a-git-tag-with-capistrano
