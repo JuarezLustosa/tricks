@@ -10,9 +10,12 @@ Tricks for help development
 ````
 
 ````
-x = Price.select("*").from("(#{sql}) as subquery")
-puts x.first.avg_price
-````
+    Ruby Rails 
+    
+    para pesqiosa subquerys
+    x = Price.select("*").from("(#{sql}) as subquery")
+    puts x.first.avg_price
+
 
 `````
     Adicionar porta no iptables
