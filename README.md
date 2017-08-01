@@ -9,6 +9,11 @@ Tricks for help development
     - scp -P NUMERO DA PORTA database@IPDAMAQUINA:/var/lib/postgresql/dump.tar.gz .
 ````
 
+````
+x = Price.select("*").from("(#{sql}) as subquery")
+puts x.first.avg_price
+````
+
 `````
     Adicionar porta no iptables
     
