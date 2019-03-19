@@ -2,6 +2,17 @@ tricks
 ======
 
 Tricks for help development
+```` 
+Issue com Nokogiri 
+
+Problema ao tentar instalar a gem Nokogiri e encontrar o seguinte erro
+
+libxml2 is missing.  please visit http://nokogiri.org/tutorials/installing_nokogiri.html for help with installing dependencies.
+
+gem install nokogiri -v 1.5.0 -- --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2
+
+Relembrar de verificar o paht do include, a versão do sdk pode estar diferente
+````
 
 `````
     Comando scp para copiar algo do servidor
@@ -62,19 +73,6 @@ Tricks for help development
   Para remover comando indevido
   - git rebase --onto <rev> <rev> 
 
-
-- Metaprograming
-
-module Utils
-  def output(message)
-    puts message
-  end
-end
-
-module MyApp extend Utils # OMG! This is totally new for me!
-end
-
-MyApp.output "hello"
 
 - Avoid bundle exec
 
