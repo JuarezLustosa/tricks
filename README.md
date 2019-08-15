@@ -2,6 +2,27 @@ tricks
 ======
 
 Tricks for help development
+
+````
+Gerar Certificado 
+
+Execute o comando abaixo para gerar um repositório de chaves chamado “server.key”:
+openssl genrsa -des3 -out /tmp/server.key 1024
+
+Execute os comandos abaixo para requisitar um novo certificado SSL:
+openssl req -new -x509 -nodes -sha1 -days 1095 -key /tmp/server.key > /tmp/server.crt 
+openssl x509 -noout -fingerprint -text /tmp/server.info
+
+Execute o comando abaixo para fazer uma cópia do repositório de chaves que tenha uma senha:
+cp /tmp/server.key /tmp/server.key.bak
+
+Execute o comando abaixo para gerar um novo repositório de chaves sem uma senha:
+openssl rsa -in /tmp/server.key -out /tmp/no.pwd.server.key
+
+Execute o comando abaixo apenas se você necessita gerar um arquivo PEM que contenha concatenado o repositório de chaves e a chave pública em um único arquivo:
+cat /tmp/no.pwd.server.key /tmp/server.crt > /tmp/no.pwd.server.pem
+````
+
 ```` 
 Issue com Nokogiri 
 
